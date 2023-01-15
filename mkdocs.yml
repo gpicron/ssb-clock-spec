@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+site_name: ssb-clock-spec
+theme:
+  name: material
+repo_url: https://github.com/gpicron/ssb-clock-spec
+
+extra_javascript:
+  - //cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js
+  - javascripts/highlight.js
+extra_css:
+  - //cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css
+
+extra:
+  version:
+    provider: mike
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+markdown_extensions:
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - def_list
+  - footnotes
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - pymdownx.highlight:
+      use_pygments: false
+  - pymdownx.superfences
+  #    custom_fences:
+  #      - name: mermaid
+  #        class: mermaid
+  #        format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+plugins:
+  - tags
+  - mermaid2:
+       version: 9.3.0
+  - bibtex:
+       bib_dir: "docs/bib"
+       cite_inline: true
+       csl_file: https://raw.githubusercontent.com/citation-style-language/styles/master/chicago-author-date-16th-edition.csl
+
